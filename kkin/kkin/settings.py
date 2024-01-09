@@ -133,6 +133,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Путь к статическим файлам
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Папка статических файлов
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '_static')]
+
 # Api keys
 
 API_KEY_YANDEX_GEOCODE = os.getenv('API_KEY_YANDEX_GEOCODE')
