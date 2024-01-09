@@ -6,6 +6,8 @@ gettext
 WORKDIR /app
 
 RUN pip install gunicorn==20.1.0
+RUN pwd
+RUN ls
 
 COPY requirements.txt .
 
