@@ -2,7 +2,7 @@ version: '3'
 
 # Перечень volume
 volumes:
-  pg_data_excepto:
+  pg_data_kkin:
   static:
   media:
 
@@ -10,7 +10,7 @@ volumes:
 services:
   # Имя и описание первого контейнера; имя выбирает разработчик.
   # Это контейнер БД
-  db_excepto:
+  db_kkin:
     # Из какого образа запустить контейнер:
     image: postgres:13.10
     # Файл (или список файлов) с переменными окружения
