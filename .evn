@@ -1,0 +1,9 @@
+SECRET_KEY=cqo7a@ibk3ieb)e(z)y^ub@-6ypy##s$(&h1p)qhw=x^ba73&3
+POSTGRES_USER=django_user_kkin
+POSTGRES_PASSWORD=js2dwq!7ers2ˆ%322
+POSTGRES_DB=kkin
+DB_NAME=kkin
+DB_HOST=db_kkin
+DB_PORT=5432
+API_KEY_YANDEX_GEOCODE=9678bd37-c418-45ca-a14a-24fa8fcc39f0
+API_KEY_YANDEX_WEATHER=72fc354e-f98c-4b67-a50f-3cb9be3eb466
