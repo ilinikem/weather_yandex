@@ -32,6 +32,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8==6.0.0 flake8-isort==6.0.0
         pip install -r ./kkin/requirements.txt
+    - name: Load environment variables
+      run: |
+        set -a
+        source ./kkin/.env
+        set +a
     - name: Test with flake8 and django tests
       env:
         POSTGRES_USER: django_user
