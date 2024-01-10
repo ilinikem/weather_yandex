@@ -16,4 +16,4 @@ COPY . .
 CMD ["gunicorn", "--bind", "0.0.0.0:9000", "kkin.wsgi"]
 
 # CMD для запуска бота
-CMD ["python", "bot.py"]
+#CMD ["python", "bot.py"]
