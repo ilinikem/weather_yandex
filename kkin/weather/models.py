@@ -66,6 +66,6 @@ class Weather(models.Model):
         verbose_name_plural = 'Погода в городах'
 
     def __str__(self):
-        return (f"{self.city_name}, Температура: {self.temperature},"
-                f" Давление: {self.pressure},"
-                f" Скорость ветра: {self.wind_speed}")
+        return (f"{self.city_name}, Температура: {self.temperature}, "
+                f"Давление: {self.pressure}, "
+                f"Скорость ветра: {self.wind_speed}")

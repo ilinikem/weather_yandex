@@ -69,7 +69,7 @@ class GetWeatherViewSet(viewsets.ViewSet):
         except Weather.DoesNotExist:
             if not coordinates:
                 return Response(
-                    {'error': f'Не удалось определить координаты'
+                    {'error': 'Не удалось определить координаты'
                               f' для города {find_city_name}'},
                     status=status.HTTP_400_BAD_REQUEST)
 
