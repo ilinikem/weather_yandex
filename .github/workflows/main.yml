@@ -32,11 +32,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8==6.0.0 flake8-isort==6.0.0
         pip install -r ./kkin/requirements.txt
-    - name: Load environment variables
-      run: |
-        set -a
-        source ./kkin/.env
-        set +a
     - name: Test with flake8 and django tests
       env:
         POSTGRES_USER: django_user
@@ -47,6 +42,8 @@ jobs:
         DB_HOST: 127.0.0.1
         DB_PORT: 5432
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        API_KEY_YANDEX_GEOCODE: ${{ secrets.API_KEY_YANDEX_GEOCODE}}
+        API_KEY_YANDEX_WEATHER: ${{ secrets.API_KEY_YANDEX_WEATHER}}
       run: |
         cd kkin/
         python -m flake8 .
