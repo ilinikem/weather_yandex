@@ -1,10 +1,13 @@
 import os
-from telegram import Update, ForceReply, ReplyKeyboardMarkup
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
+
 import requests
 from dotenv import load_dotenv
+from telegram import ReplyKeyboardMarkup, Update
+from telegram.ext import (Application, CallbackContext, CommandHandler,
+                          MessageHandler, filters)
 
 from kkin.settings import ON_PROD
+
 load_dotenv()
 
 BOT_TOKEN = os.getenv('BOT_TOKEN')
@@ -38,13 +41,15 @@ async def get_weather(update: Update, context: CallbackContext) -> None:
         pressure = response.json().get('pressure')
         wind_speed = response.json().get('wind_speed')
         await update.message.reply_text(
-            f'Информация о погоде для города {weather_city_name}:\nТемпература: {temperature} гр.'
-            f'\nДавление: {pressure} мм рт. ст.\nСкорость ветра: {wind_speed} м/с'
+            f'Информация о погоде для города {weather_city_name}: '
+            f'\nТемпература: {temperature} гр.\nДавление: {pressure} '
+            f'мм рт. ст.\nСкорость ветра: {wind_speed} м/с'
         )
-    except requests.exceptions.RequestException as e:
+    except requests.exceptions.RequestException:
 
-        await update.message.reply_text(f'Ошибка при запросе к API:'
-                                        f' Повторите запрос или попробуйте позже')
+        await update.message.reply_text(
+            'Ошибка при запросе к API: Повторите запрос'
+            ' или попробуйте позже')
 
 
 def main() -> None:
