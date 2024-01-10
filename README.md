@@ -18,15 +18,16 @@
 
 ## Ключи
 - SECRET_KEY
+- API_KEY_YANDEX_GEOCODE
+- API_KEY_YANDEX_WEATHER
+
+**(Необходимые ключи для деплоя)**
 - POSTGRES_USER
 - POSTGRES_PASSWORD
 - POSTGRES_DB
 - DB_NAME
 - DB_HOST
-- DB_PORT
-- API_KEY_YANDEX_GEOCODE
-- API_KEY_YANDEX_WEATHER
-   
+- DB_PORT   
 3. Создайте файл .env в корне проекта и укажите в нем необходимые настройки:
 
    ```python manage.py makemigrations```
