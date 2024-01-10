@@ -13,7 +13,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 ON_PROD = True
-ON_PROD = False
+# ON_PROD = False
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if ON_PROD:
