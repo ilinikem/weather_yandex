@@ -12,8 +12,5 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . .
-#
-#CMD ["gunicorn", "--bind", "0.0.0.0:9000", "kkin.wsgi"]
 
-# CMD для запуска бота
-CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:9000 kkin.wsgi && python bot.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:9000", "kkin.wsgi"]
